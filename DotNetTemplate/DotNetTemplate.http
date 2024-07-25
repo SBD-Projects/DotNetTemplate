@@ -10,7 +10,20 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com"
+  "firstName": "Joe",
+  "lastName": "Doe",
+  "email": "doe.joe@example.com",
+  "password": "P@ssw0rd3",
+  "phoneNumber": "0790000002"
 }
+
 ###
+
+POST {{DotNetTemplate_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "doe.mark@example.com",
+  "password": "P@ssw0rd2"
+}

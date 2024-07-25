@@ -2,11 +2,13 @@
 
 namespace DotNetTemplate.Models;
 
-public record UserDto(int Id, string Name, string Email)
+public record UserDto(int Id, string FirstName, string LastName, string Email, string PhoneNumber)
 {
-    public UserDto(User user) : this(user.Id, user.Name, user.Email)
+    public UserDto(User user) : this(user.Id, user.FirstName, user.LastName, user.Email, user.PhoneNumber)
     {
     }
 }
 
-public record UserCreateRequest(string Email, string Name);
+public record UserCreateRequest(string Email, string FirstName, string LastName, string Password, string PhoneNumber);
+
+public record UserLoginRequest(string Email, string Password);

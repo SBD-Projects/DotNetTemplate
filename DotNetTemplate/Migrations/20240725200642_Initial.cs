@@ -17,8 +17,11 @@ namespace DotNetTemplate.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
+                    FirstName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "character varying(26)", maxLength: 26, nullable: false),
+                    PhoneNumber = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {
