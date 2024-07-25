@@ -24,4 +24,12 @@ public class User(string firstName, string lastName, string email, string passwo
     public string PhoneNumber { get; private set; } = string.IsNullOrWhiteSpace(phoneNumber) && phoneNumber.Length > 15
         ? throw new ArgumentException("Warehouse name cannot be empty", nameof(phoneNumber)) 
         : phoneNumber;
+
+    public void Update(string firstName, string lastName, string email, string phoneNumber)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+        PhoneNumber = phoneNumber;
+    }
 }

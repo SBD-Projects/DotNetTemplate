@@ -12,3 +12,5 @@ public record UserDto(int Id, string FirstName, string LastName, string Email, s
 public record UserCreateRequest(string Email, string FirstName, string LastName, string Password, string PhoneNumber);
 
 public record UserLoginRequest(string Email, string Password);
+
+public record UpdateUserRequest(int Id, string Email, string FirstName, string LastName, string PhoneNumber);

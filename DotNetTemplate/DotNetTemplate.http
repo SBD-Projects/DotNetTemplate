@@ -5,6 +5,11 @@ Accept: application/json
 
 ###
 
+GET {{DotNetTemplate_HostAddress}}/users/34
+Accept: application/json
+
+###
+
 POST {{DotNetTemplate_HostAddress}}/users/
 Accept: application/json
 Content-Type: application/json
@@ -27,3 +32,24 @@ Content-Type: application/json
   "email": "doe.mark@example.com",
   "password": "P@ssw0rd2"
 }
+
+###
+
+DELETE {{DotNetTemplate_HostAddress}}/users/1
+Accept: application/json
+
+###
+
+PUT {{DotNetTemplate_HostAddress}}/users/update
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 34,
+  "firstName": "Wow",
+  "lastName": "Yay",
+  "email": "wow.yay@mail.com",
+  "phoneNumber": "0790000004"
+}
+
+###
